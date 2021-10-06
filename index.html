@@ -13,21 +13,25 @@
 </head>
 
 <body>
-    <label>
+    <div id="griddy">
+    <label id="rockwhole" class="pics">
         rock
         <input type="radio" name="rps" id="rock" value="rock">
         <img id="therock"src="https://th.bing.com/th/id/R.e55c6c41b2fca0e385eb5e24f290d3c6?rik=AAsUTFt%2fDr3zVA&riu=http%3a%2f%2fwww.hdwallpapersfreedownload.com%2fuploads%2flarge%2fwwe-superstars%2fthe-rock-dwayne-johnson-wwe.jpg&ehk=%2ffru3BCVbcLoOrCLsqQL2F7fhlY%2bf6jjzi5lOOqc22U%3d&risl=&pid=ImgRaw&r=0" alt="Dwayne The Rock Johnson">
     </label>
-    <label>
+    <label id="paperwhole" class="pics">
         paper
         <input type="radio" name="rps" id="paper" value="paper">
-        <img
+        <img id="thepaper" src="https://images.vectorhq.com/images/previews/118/lil-wayne-holding-money-bags-psd-470917.png" alt="Lil Wayne I don't know he gets paper">
     </label>
-    <label>
+    <label id="scissorswhole" class="pics">
         scissors
         <input type="radio" name="rps" id="scissors" value="scissors">
-        <img src=" " alt="">
+        <img id="thescissors" src="https://themighty.com/wp-content/uploads/2020/02/53939646-1a70-44d9-8a53-a3556b8c757c-1280x640.jpg" alt="Edward Scissorhands">
     </label>
+    </div>
+    <div id="hidden">Select your fighter</div>
+    
     <button id='play'>FIGHT</button>
     <p>Wins: <span id="wins"></span></p>
     <p>Loses: <span id="losses"></span></p>
