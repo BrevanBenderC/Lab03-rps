@@ -1,54 +1,80 @@
 //import { didUserWin } from "./calculations";
 
+import { didUserWin } from "./calculations.js";
+
 const btn = document.getElementById('play');
 const winSpan = document.getElementById('wins');
-const lossSpan = document.getElementById('losses');
-const hidden = document.getElementById('hidden')
-
+const lossSpan = document.getElementById('loses');
+const hidden = document.getElementById('hidden');
+let ifWin = document.getElementById('ifWin');
+let ifLose = document.getElementById('ifLose');
+let ifdraw = document.getElementById('ifDraw');
 let wins = 0;
-let losses = 0;
-
+let loses = 0;
+const reset = document.getElementById('reset');
 btn.addEventListener('click', ()=>{
-  losses++;
-  const userChoice = document.querySelector('input[type=radio]:checked');
-   const comChoice = ['rock', 'paper', 'scissors'][Math.floor(Math.random()*4)]
+  const userChoice = document.querySelector('input[type=radio]:checked').value;
+   const comChoice = ['rock', 'paper', 'scissors'][Math.floor(Math.random()*3)]
   console.log(comChoice)
+  console.log(userChoice)
   if (userChoice === comChoice){
-    return draw
+    document.getElementById('ifDraw').innerHTML = "Great minds think alike. Go again!"
 }
-if (userChoice === "paper") {
+  if(didUserWin(userChoice, comChoice)){
+    wins++
+    document.getElementById('ifWin').innerHTML = `You Win! You chose ${userChoice} and the com chose ${comChoice}.`
+  } else {
+    loses++
+    document.getElementById('ifLose').innerHTML = `You Lose! You chose ${userChoice} and the com chose ${comChoice}.`
+  }
+/*if (userChoice === "paper") {
     if (comChoice === "rock") {
-        return true;
+       document.getElementById('ifWin').innerHTML = "Your paper beat com's rock." 
+      wins++;
+       return true;
     } else {
         if (comChoice === "scissors") {
-            return false;
+           document.getElementById('ifLose').innerHTML = "Your paper was beaten by com's scissors." 
+           loses++;
+           return false;
         }
     }
 }
 if (userChoice === "scissors") {
     if (comChoice === "rock") {
+        document.getElementById('ifLose').innerHTML = "Your paper was beaten by com's scissors"
+        loses++;
         return false;
      } else {
         if (comChoice === "paper") {
-            return true;
+          document.getElementById('ifWin').innerHTML = "Your scissors beat com's paper."
+          wins++;
+          return true;
         }
     }
 }
 if (userChoice === "rock") {
     if (comChoice === "scissors") {
-        return true;
+      document.getElementById('ifWin').innerHTML = "Your rock beat com's scissors." 
+      wins++;
+      return true;
      } else {
         if (comChoice === "paper") {
-            return false;
+          document.getElementById('ifLose').innerHTML = "Your rock was beaten by com's paper." 
+          loses++;
+          return false;
         }
     }
 }
 
+winSpan = Number(wins);
+lossSpan = Number(loses); */
+winSpan.textContent = wins
+lossSpan.textContent = loses
 
-
-
-}
-
-
-
-)
+})
+reset.addEventListener('click', ()=>{
+  document.getElementById('ifWin').innerHTML = ' '
+  document.getElementById('ifLose').innerHTML = ' '
+  document.getElementById('ifDraw').innerHTML = ' '
+})

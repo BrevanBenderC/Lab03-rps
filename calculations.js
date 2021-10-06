@@ -29,9 +29,5 @@ export function didUserWin(userChoice, comChoice){
             }
         }
     }
-
-
-
-
 }
 

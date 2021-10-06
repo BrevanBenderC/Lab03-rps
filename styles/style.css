@@ -1,20 +1,69 @@
-
-    body {
-        align-content: center;
-        text-align: center;
-        justify-content: center;
-    }
+body{
+    background-image: url('https://www.shitpostbot.com/img/templates/versus-screen-57d63b32ba44d.png');
+    background-size: cover;
+    background-position: center;
     
-   
+}
+
+#griddy{
+    display: grid;
+    align-content: left;
+    z-index: -1;
+}   
 #therock{
     width: 300px;
     height: 200px
+    grid-column-start: 1;
+    
 }
 #thepaper{
     height: 300px;
     width: 200px;
+    grid-column-start: 1;
 }
 #thescissors{
     height: 200px;
     width: 300px;
+    grid-column-start: 1;
+}
+#words{
+    align-content: center;
+    text-align: center;
+    margin-top: 0%;
+    z-index: -1;
+    margin: auto;
+
+    
+}
+
+
+
+#hidden{
+    font-family: share tech mono;
+    color: orange;
+    font-size: 5rem;
+    background-color: black;
+}
+.byebutton{
+    display: none;
+}
+#ifWin{
+    background-color: black;
+    font-size: 2rem;
+    color: whitesmoke;
+}
+#ifLose{
+    background-color: black;
+    font-size: 2rem;
+    color: whitesmoke;
+}
+#wins{
+    background-color: black;
+    font-size: 1.5rem;
+    color: whitesmoke;
+}
+#loses{
+    background-color: black;
+    font-size: 2rem;
+    color: whitesmoke;
 }
