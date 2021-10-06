@@ -1,8 +1,18 @@
-// import functions and grab DOM elements
+const btn = document.getElementById('play');
+const winSpan = document.getElementById('wins');
+const lossSpan = document.getElementById('losses');
 
-// initialize global state
+let wins = 0;
+let loses = 0;
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+btn.addEventListener('click', ()=>{
+  const selected = document.querySelector('input[type=radio]:checked');
+  if(!selected){
+    return error.classlist.remove('hidden')
+  }
+  
+  
+  console.log(selected.value)
+
+
+})
