@@ -1,6 +1,6 @@
 //import { didUserWin } from "./calculations";
 
-import { didUserWin } from "./calculations.js";
+import { didUserWin } from './calculations.js';
 
 //set variables
 
@@ -18,11 +18,11 @@ const reset = document.getElementById('reset');
 //button fun
 
 btn.addEventListener('click', ()=>{
-  const userChoice = document.querySelector('input[type=radio]:checked').value;
-   const comChoice = ['rock', 'paper', 'scissors'][Math.floor(Math.random()*3)]
-   document.getElementById('ifDraw').innerHTML = " "
-   document.getElementById('ifLose').innerHTML = " "
-   document.getElementById('ifWin').innerHTML = " "
+    const userChoice = document.querySelector('input[type=radio]:checked').value;
+    const comChoice = ['rock', 'paper', 'scissors'][Math.floor(Math.random() * 3)];
+    document.getElementById('ifDraw').innerHTML = " "
+    document.getElementById('ifLose').innerHTML = " "
+    document.getElementById('ifWin').innerHTML = " "
   if (userChoice === comChoice){
     document.getElementById('ifDraw').innerHTML = "Great minds think alike. Go again!"
 }
