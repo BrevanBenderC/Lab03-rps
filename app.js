@@ -25,7 +25,7 @@ btn.addEventListener('click', ()=>{
     document.getElementById('ifWin').innerHTML = " "
   if (userChoice === comChoice){
     document.getElementById('ifDraw').innerHTML = "Great minds think alike. Go again!"
-}
+  }
   if(didUserWin(userChoice, comChoice)){
     wins++
     document.getElementById('ifWin').innerHTML = `You Win! You chose ${userChoice} and the com chose ${comChoice}.`

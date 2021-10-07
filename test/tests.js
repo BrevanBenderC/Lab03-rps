@@ -1,78 +1,62 @@
-import { didUserWin } from "../calculations";
+import { didUserWin } from "../calculations.js";
 
 const test = QUnit.test
 
 test('user picks rock, com picks paper', (expect)=>{
 
-    userChoice= 'rock'
-    comChoice= 'paper'
-    const expected = false;
+    const expected = false
+    const actual = didUserWin('rock', 'paper')
+    expect.equal(actual, expected);
 
 
 
 })
 test('user picks paper, com picks paper', (expect)=>{
 
-    userChoice= 'paper'
-    comChoice= 'paper'
-
-    const expected =draw
-
+    const expected = 'draw'
+    const actual = didUserWin('paper', 'paper')
+    expect.equal(actual, expected);
 
 
 })
 test('user picks scissors, com picks paper', (expect)=>{
 
     
-    userChoice= 'scissors'
-    comChoice= 'paper'
-
-
     const expected = true
-
-
+    const actual = didUserWin('scissors', 'paper')
+    expect.equal(actual, expected);
 
 })
 test('user picks rock, com picks rock', (expect)=>{
 
 
 
-
-    userChoice= 'rock'
-    comChoice= 'rock'
-
-    const expected =draw
-
+    const expected = 'draw'
+    const actual = didUserWin('rock', 'rock')
+    expect.equal(actual, expected);
 
 
 })
 test('user picks paper, com picks rock', (expect)=>{
 
-    
-    userChoice= 'paper'
-    comChoice= 'rock'
-
     const expected = true
-
+    const actual = didUserWin('paper', 'rock')
+    expect.equal(actual, expected);
 
 
 })
 test('user picks scissors, com picks rock', (expect)=>{
 
-   
-    userChoice= 'scissors'
-    comChoice= 'rock'
-
     const expected = false
-
+    const actual = didUserWin('scissors', 'rock')
+    expect.equal(actual, expected);
 })
 test('user picks rock, com picks scissors', (expect)=>{
 
 
-    userChoice= 'rock'
-    comChoice= 'scissors'
-
-    const expected = false
+    const expected = true
+    const actual = didUserWin('rock', 'scissors')
+    expect.equal(actual, expected);
 
 
 
@@ -81,11 +65,9 @@ test('user picks paper, com picks scissors', (expect)=>{
 
 
     
-    userChoice= 'paper'
-    comChoice= 'scissors'
-
     const expected = false
-
+    const actual = didUserWin('paper', 'scissors')
+    expect.equal(actual, expected);
 
 
 
@@ -94,11 +76,9 @@ test('user picks scissors, com picks scissors', (expect)=>{
 
 
 
-    userChoice= 'scissors'
-    comChoice= 'scissors'
-
-    const expected = draw
-
+    const expected = 'draw'
+    const actual = didUserWin('scissors', 'scissors')
+    expect.equal(actual, expected);
 
 
 

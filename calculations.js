@@ -1,6 +1,6 @@
 export function didUserWin(userChoice, comChoice){
     if (userChoice === comChoice){
-        return draw
+        return 'draw'
     }
     if (userChoice === "paper") {
         if (comChoice === "rock") {
@@ -30,4 +30,5 @@ export function didUserWin(userChoice, comChoice){
         }
     }
 }
+
 

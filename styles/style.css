@@ -36,6 +36,9 @@ body{
     
 }
 
+input[type=radio]: :checked + .label {
+    animation: rotatetext 3s linear 
+}
 
 
 #hidden{
